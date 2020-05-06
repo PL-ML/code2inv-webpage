@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Code2Inv | Getting Started</title>
+	<%- include('../partial/includes.ejs') %>
+	<script src="js/getting_started.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/getting_started.css" />
+</head>
+
+<body>
+	<%- include('../partial/navbar.ejs') %>
+
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Getting Started with Code2Inv</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>With Docker (the easy way)</h3>
+                <p>
+                    This is the easiest way to get started with Code2Inv.
+                    All you need is a machine with <a href="https://www.docker.com/">Docker</a>
+                    installed and you are set!
+                </p>
+                <p>
+                    Once you have Docker installed, you simply need to pull the Docker image
+                    from our Dockerhub repository. Fair warning, though, the image is a bit big.
+                </p>
+                <pre>$ docker pull code2inv/code2inv</pre>
+                <p>
+                    Once the download is complete, you can run it as follows:
+                </p>
+                <pre>$ docker run -it --name code2inv code2inv/code2inv</pre>
+                <p>
+                    This should run the image in a Docker container called code2inv. You can now
+                    play around with Code2Inv! Refer to the
+                    <a href="https://github.com/PL-ML/code2inv/blob/master/README.md#experiments"
+                    target="_blank">Experiments section</a>
+                    in our README (available in our GitHub Repository) to know how to run Code2Inv.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Building From Source (the not-so-easy way)</h3>
+                <p>
+                    You can visit our GitHub repository <a href="https://github.com/PL-ML/code2inv">here</a>.
+                    All the instructions for installing Code2Inv and its front-ends are in the README.md file.
+                    Follow those instructions and you should be done with installing Code2Inv in no time!
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Running Code2Inv</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
