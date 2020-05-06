@@ -1,0 +1,10 @@
+body {
+    font-family: Montserrat;
+    font-size: large;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+div.row {
+    margin-bottom: 10px;
+}

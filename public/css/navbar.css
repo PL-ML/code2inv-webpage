@@ -1,0 +1,17 @@
+.navbar-brand {
+    font-size: xx-large;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.navbar-right {
+    margin-right: 15px;
+}
+
+a.nav-link {
+    font-size: medium;
+    padding: 12.5px;
+}
+
+#repo i {
+    font-size: x-large;
+}

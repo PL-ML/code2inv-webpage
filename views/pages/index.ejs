@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Code2Inv</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="js/index.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+
+</head>
+
+<body>
+	<%- include('../partial/navbar.ejs') %>
+
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Code2Inv: A Framework for Learning Loop Invariants</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>
+                    Code2Inv is a general end-to-end deep learning framework which learns a valid loop
+                    invariant for any given verification task.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Why Loop Invariants?</h3>
+                <p>
+                    Automated program verification is an extremely difficult task, especially for practical
+                    programs. A major challenge lies in effective proof search. Finding loop invariants is
+                    arguably the most crucial part of this proof search.
+                </p>
+                <p>
+                    So what is a loop invariant? A loop invariant, simply put, is a condition that is true
+                    before and after each iteration of a loop. Proofs for instances containing loops can
+                    be found if the correct loop invariant is inferred for each loop. However, inferring
+                    these loop invariants is a complicated process which can prove to be challenging even
+                    for seemingly simple programs.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>So What is Code2Inv?</h3>
+                <p>
+                    Code2Inv is a framework which infers loop invariants for a given task. It is based on the
+                    Counter-Example Guided Inductive Synthesis (CEGIS) paradigm, where a generator proposes a
+                    candidate solution and a checker determines the correctness of this candidate solution.
+                    Code2Inv works in a multi-step decision making process similar to how human experts
+                    construct loop invariants.
+                    Code2Inv leverages reinforcement learning to learn the features of the task and infer the
+                    invariant without the need of any supervision.
+                </p>
+                <p>
+                    Code2Inv is a general framework. As long as the inputs provided match match the general
+                    requirements, it is possible to use Code2Inv. The inputs are such that instances in several
+                    languages can be easily reduced to the input requirements. We demonstrate this with C programs
+                    and CHC constraints, but this could be extended to other languages as well.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
