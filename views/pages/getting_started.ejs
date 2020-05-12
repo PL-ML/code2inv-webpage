@@ -57,6 +57,23 @@
         <div class="row">
             <div class="col-lg-12">
                 <h3>Running Code2Inv</h3>
+                <p>
+                    Code2Inv takes as input a graph file, a verification condition file and a specification file.
+                    We include details about these files and how to use them with different programs in our repository
+                    <a href="https://github.com/PL-ML/code2inv/blob/master/customizing.md" target="_blank">here</a>.
+                    We also have example inputs in our
+                    <a href="https://github.com/PL-ML/code2inv/tree/master/benchmarks" target="_blank">
+                        benchmarks directory</a>.
+                </p>
+                <p>
+                    We refer to the Code2Inv repository root as <code>code2inv-repo</code>. Running Code2Inv is straightforward.
+                    The script for running Code2Inv called <code>run_solver_file.sh</code> is located in the
+                    <code>code2inv-repo/code2inv/prog_generator</code> directory. It takes the three inputs as mentioned
+                    earlier as well as an option to specify the output file. We show running Code2Inv on one of the C
+                    programs we provide in the benchmarks directory.
+                </p>
+                <pre>$ cd code2inv-repo/code2inv/prog_generator<br>$ ./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec</pre>
+                
             </div>
         </div>
     </div>
