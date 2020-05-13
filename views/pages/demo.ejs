@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Code2Inv | Demo</title>
+	<%- include('../partial/includes.ejs') %>
+	<script src="js/demo.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/demo.css" />
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</head>
+
+<body>
+	<%- include('../partial/navbar.ejs') %>
+
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>A Demo of Code2Inv</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 btn-group-vertical" id="file_list">
+                <% for(var i = 0; i < file_list.length; i++) { %>
+                    <a class="btn file-list-btn" id="file-<%=file_list[i]%>">
+                        <%=file_list[i]%>
+                    </a><br>
+                <% } %>
+            </div>
+            <div class="col-lg-5">
+                <div class="card">
+                    <div class="card-title" id="file_name">
+                        <h3>Select a file</h3>
+                    </div>
+                    <div class="card-body">
+                        <pre><code class="prettyprint" id="file_source">/* Select a file to show its code */</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card">
+                    <div class="card-title" id="result-card-title">
+                        <h3>Result</div></h3>
+                    </div>
+                    <div class="card-body">
+                        <pre><code class="prettyprint" id="result">/* The result will be displayed here */</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

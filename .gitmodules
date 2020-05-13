@@ -1,0 +1,3 @@
+[submodule "data/code2inv"]
+	path = data/code2inv
+	url = https://github.com/PL-ML/code2inv
