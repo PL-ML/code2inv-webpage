@@ -1,0 +1,15 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    width: 60%;
+}
+
+td {
+    /* border:solid 2px black; */
+    text-align: center;
+}
+
+.sponsor_img {
+    height: 80px;
+}
