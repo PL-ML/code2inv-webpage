@@ -21,18 +21,33 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                Code2Inv offers the following:
-                <ul>
-                    <li>
-                        
-                    </li>
-                    <li>
-                        Feature 2
-                    </li>
-                    <li>
-                        Feature 3
-                    </li>
-                </ul>
+                <h3>Transferability</h3>
+                Code2Inv learns a neural policy for each benchmark while learning its invariant.
+                The neural policy learned depends on the graph structure of the program including
+                components like variables, constants, control flow, data flow and others.
+                As such, this learned neural policy can be used to accelerate the search for
+                invariants in other similar programs.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Flexibility</h3>
+                Code2Inv is built to be flexible. We demonstrate the ability of Code2Inv to learn
+                invariants for C programs as well as act as a CHC solver, both using the same
+                general framework but with different front-ends.
+                We also demonstrate the ability of Code2Inv to solve non-linear CHC tasks by simply
+                changing the grammar of the expected invariant.
+                We describe the general process involved in customizing Code2Inv in the
+                <a href="https://github.com/PL-ML/code2inv/blob/master/customizing.md"
+                target="_blank">customizing.md</a> file in our GitHub repository.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Naturalness</h3>
+                Solutions discovered by Code2Inv tend to be more natural and more easily
+                understandable, which allows people to more easily use Code2Inv.
+                The naturalness does depend on the grammar of the invariant.
             </div>
         </div>
     </div>

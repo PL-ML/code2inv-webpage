@@ -11,5 +11,17 @@
 }
 
 .people-inst {
-    font-size: small;
+    /* font-size: small; */
+    font-weight: bolder;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.people-img {
+    width: 100px;
 }

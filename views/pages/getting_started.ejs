@@ -57,15 +57,46 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <h3>Running Code2Inv</h3>
+                <h3>Customizing Code2Inv</h3>
                 <p>
                     Code2Inv takes as input a graph file, a verification condition file and a specification file.
-                    We include details about these files and how to use them with different programs in our repository
-                    <a href="https://github.com/PL-ML/code2inv/blob/master/customizing.md" target="_blank">here</a>.
-                    We also have example inputs in our
+                    We have included example inputs in our GitHub repository in the
                     <a href="https://github.com/PL-ML/code2inv/tree/master/benchmarks" target="_blank">
                         benchmarks directory</a>.
                 </p>
+                <p>
+                    The graph file is a file containing a single JSON object, with a list of nodes and the control
+                    flows between these nodes. These nodes include statements and expressions with details of these
+                    statements, including the variables, constants and operators used. This graph is indicative of
+                    the structural representation of the program. We include details about constructing the graph
+                    file <a href="https://github.com/PL-ML/code2inv/blob/master/customizing.md#the-graph-file"
+                    target="_blank">here</a> in our GitHub repository.
+                </p>
+                <p>
+                    The verification condition file is a file containing the verification conditions used to check
+                    the correctness of the predicted invariant candidate. This may be in any format provided that
+                    the checker is able to process them and extract the counter examples when needed. We include
+                    further details about the verification condition file
+                    <a href="https://github.com/PL-ML/code2inv/blob/master/customizing.md#the-verification-condition-file"
+                    target="_blank">here</a> in our GitHub repository.
+                </p>
+                <p>
+                    The specification file is a file which contains the relative path to the grammar file, the name
+                    of the checker module and the variable format which occurs in both the graph and the
+                    verification condition files. The grammar file contains the grammar used to construct the invariant.
+                    The checker module is used for checking the proposed invariant candidate against the verification
+                    condition file and returning any counter examples. The variable format is to be specified as
+                    <code>ssa</code> only if the SSA format of variables is used in the input graph and the
+                    verification condition file. We include more details about the specification file
+                    <a href="https://github.com/PL-ML/code2inv/blob/master/customizing.md#the-specification-file"
+                    target="_blank">here</a> in our GitHub repository.
+                    
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Running Code2Inv</h3>
                 <p>
                     We refer to the Code2Inv repository root as <code>code2inv-repo</code>. Running Code2Inv is straightforward.
                     The script for running Code2Inv called <code>run_solver_file.sh</code> is located in the
@@ -77,6 +108,7 @@
                 
             </div>
         </div>
+        
     </div>
 </body>
 </html>
