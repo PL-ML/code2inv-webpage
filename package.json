@@ -4,12 +4,14 @@
   "description": "The website for code2inv",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Aaditya Naik",
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "async": "^3.2.0",
     "ejs": "^3.1.2",
     "express": "^4.17.1",
     "express-request-id": "^1.4.1"

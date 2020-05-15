@@ -3,9 +3,16 @@
     padding-left: 0.25em;
 }
 
+.card {
+    height: 60vh;
+}
+
+.card-body {
+    height: 100%;
+}
+
 pre {
-    height: auto;
-    max-height: 60vh;
+    height: 100%;
     overflow: auto;
     background-color: #eeeeee;
     word-break: normal !important;
@@ -18,8 +25,8 @@ pre {
 }
 
 .loader {
-    border: 3px solid #f3f3f3; /* Light grey */
-    border-top: 3px solid #3498db; /* Blue */
+    border: 3px solid #3498db; /* Blue */
+    border-top: 3px solid white; /* Light grey */
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -35,6 +42,16 @@ pre {
     100% { transform: rotate(360deg); }
 }
 
+#result-container {
+    background-color: white;
+    border: none;
+    /* display: contents; */
+    /* padding: 9.5px; */
+}
+
+a.tab-link, a.tab-link:active, a.tab-link:focus {
+    outline: none;
+}
 /* .result-card-title {
     display: inline;
 } */
