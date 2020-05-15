@@ -24,6 +24,10 @@ pre {
     float: right;
 }
 
+.file-list-btn-active {
+    color: black;
+}
+
 .loader {
     border: 3px solid #3498db; /* Blue */
     border-top: 3px solid white; /* Light grey */

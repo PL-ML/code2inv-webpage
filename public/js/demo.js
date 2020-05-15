@@ -64,8 +64,8 @@ function getSource() {
     vc_contents = "/* Select a file to show its verification conditions */"
     grammar = "/* Select a file to show its associated invariant grammar */"
     $("#src_source").parent().click()
-    invariant = "Running for " + file_name + "..."
-    stats = "Running for " + file_name + "..."
+    invariant = "/* The result will be displayed here */"
+    stats = "/* The stats will be displayed here */"
     $("#res_inv").parent().click()
     // console.log(main_url + "source_file?filename=" + file_name)
     $.ajax({
@@ -79,8 +79,8 @@ function getSource() {
             // document.getElementById("file_source").innerText=response.source
             document.getElementById("file_name").innerHTML="<h3><span id='fname'>"+file_name+"</span> <button class=\"btn btn-primary\" id=\"run_btn\">Run</button></h3>"
             file_contents = response.source
-            graph_contents = response.graph
-            vc_contents = response.vc
+            graph_contents = response.graph.replace(/\t/g, "  ")
+            vc_contents = response.vc.replace(/\t/g, "  ")
             grammar = response.grammar
             $("#src_source").parent().click()
         } else {
@@ -91,6 +91,9 @@ function getSource() {
             vc_contents = "/* There was an error in retrieving the files */"
             grammar = "/* There was an error in retrieving the files */"
             $("#src_source").parent().click()
+            invariant = "/* The result will be displayed here */"
+            stats = "/* The stats will be displayed here */"
+            $("#res_inv").parent().click()
         }
         // document.getElementById("file_source").classList.remove("prettyPrinted")
         $("#file_source").removeClass("prettyprinted")
