@@ -1,13 +1,17 @@
 const express = require('express')
 var fs = require('fs')
 var async = require('async')
+// var cors = require('cors')
 
 app = express()
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views/')
 app.use(express.static('public'))
+// app.use(cors({
+//     origin: 'https://code2inv.cis.upenn.edu'
+// }))
 
-const PORT = process.env.PORT || 5000
+const PORT = 5000
 
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`))
 
@@ -57,6 +61,8 @@ app.get('/source_file',  function(req, res) {
     var count = 0
     var res_data = {}
     res_data.success = true
+    // console.log(req.get('host'))
+    // res.set('Access-Control-Allow-Origin')
 
     if(filename.slice(-1) == "c") {
         files = [
@@ -152,6 +158,8 @@ app.get('/solve', function(req, res) {
             time = stdout.match("time: (.*) pid")[1]
             stats = JSON.parse(stdout.match("Counter\((.*)\)")[1].replace(/'/g, '"').slice(1, -1))
             // console.log(result_invar)
+            // console.log(stdout.match("Counter\((.*)\)")[1])
+            // console.log(stats)
             // console.log("FILE NAME" + filename)
             res.send({
                 success: true,

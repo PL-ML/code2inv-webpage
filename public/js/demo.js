@@ -1,4 +1,5 @@
-const main_url = "http://localhost:5000/"
+// const main_url = "https://localhost:5000/"
+const main_url = "https://code2inv.cis.upenn.edu/"
 
 var selected_file = null
 var file_contents = "/* Select a file to show its code */"
@@ -56,6 +57,7 @@ function fill_res(element) {
 }
 
 function getSource() {
+    window.location = "#file_name"
     file_name = this.id.slice(5)
     document.getElementById("file_name").innerHTML="<h3>Loading "+file_name+"...</h3>"
     document.getElementById("file_source").innerText="Loading..."
@@ -105,6 +107,7 @@ function getSource() {
         PR.prettyPrint()
         document.getElementById('run_btn').onclick = solveFile
     }).fail(function(error) {
+        document.getElementById("file_name").innerHTML="<h3><span id='fname'>Error</span></h3>"
         console.log(error)
     })
 
@@ -112,6 +115,7 @@ function getSource() {
 }
 
 function solveFile() {
+    window.location = "#result-card-title"
     file_name = document.getElementById("fname").innerHTML
     if(file_name.slice(-2) == ".c" || file_name.slice(-4) == ".smt") {
         document.getElementById("result-card-title").innerHTML = '<h3>Running...<div class="loader"></h3>'
@@ -155,6 +159,10 @@ function solveFile() {
                         } else {
                             invariant += c
                         }
+                    }
+
+                    if(response.stats["ce-I:"] == undefined) {
+                        response.stats["ce-I:"] = 0
                     }
 
                     stats = ""

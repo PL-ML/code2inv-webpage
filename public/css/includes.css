@@ -1,6 +1,16 @@
+h3 {
+    font-size: 1.3em;
+    text-align: left;
+}
+
+h2 {
+    font-size: 1.55em;
+    text-align: left;
+}
+
 body {
     font-family: Montserrat;
-    /* font-size: large; */
     text-align: justify;
+    font-size: 1.5em;
     text-justify: inter-word;
 }

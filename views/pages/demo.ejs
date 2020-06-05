@@ -15,12 +15,12 @@
 	<div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1>A Demo of Code2Inv</h1>
+                <h2>A Demo of Code2Inv</h2>
                 <hr>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-2 btn-group-vertical" id="file_list">
+            <div class="col-md-2 col-xs-12 btn-group-vertical" id="file_list">
                 <h3>Select a file</h3>
                 <% for(var i = 0; i < file_list.length; i++) { %>
                     <a class="btn file-list-btn" id="file-<%=file_list[i]%>">
@@ -28,7 +28,7 @@
                     </a><br>
                 <% } %>
             </div>
-            <div class="col-lg-5">
+            <div class="col-md-5 col-xs-12">
                 <div class="card">
                     <div class="card-title" id="file_name">
                         <h3>Your selected file will show up here</h3>
@@ -37,16 +37,16 @@
                         <div id="tab-div">
                             <ul class="nav nav-tabs src-tabs" id="src-tabs">
                                 <li class="active" onclick="fill_src(this)">
-                                    <a href="#" class="tab-link" id="src_source">Code</a>
+                                    <a href="#file_name" class="tab-link" id="src_source">Code</a>
                                 </li>
                                 <li onclick="fill_src(this)">
-                                    <a href="#" class="tab-link" id="src_graph">Graph</a>
+                                    <a href="#file_name" class="tab-link" id="src_graph">Graph</a>
                                 </li>
                                 <li onclick="fill_src(this)">
-                                    <a href="#" class="tab-link" id="src_vc">VC</a>
+                                    <a href="#file_name" class="tab-link" id="src_vc">VC</a>
                                 </li>
                                 <li onclick="fill_src(this)">
-                                    <a href="#" class="tab-link" id="src_grammar">Grammar</a>
+                                    <a href="#file_name" class="tab-link" id="src_grammar">Grammar</a>
                                 </li>
                             </ul>
                         </div>
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-md-5 col-xs-12">
                 <div class="card">
                     <div class="card-title" id="result-card-title">
                         <h3>Result</h3>
@@ -63,10 +63,10 @@
                         <div id="tab-div">
                             <ul class="nav nav-tabs" id="res-tabs">
                                 <li class="active" onclick="fill_res(this)">
-                                    <a href="#" class="tab-link" id="res_inv">Invariant</a>
+                                    <a href="#result-card-title" class="tab-link" id="res_inv">Invariant</a>
                                 </li>
                                 <li onclick="fill_res(this)">
-                                    <a href="#" class="tab-link" id="res_stats">Stats</a>
+                                    <a href="#result-card-title" class="tab-link" id="res_stats">Stats</a>
                                 </li>
                             </ul>
                         </div>
